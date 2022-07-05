@@ -120,6 +120,10 @@
 
         function save_bucket() {
                 let bucket = $('#bucket').val()
+                if (bucket==""){
+                    alert('입력하세요')
+                }
+                else
                     $.ajax({
                         type: "POST",
                         url: "/bucket",
